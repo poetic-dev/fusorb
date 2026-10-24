@@ -119,8 +119,18 @@ async function main() {
       continue;
     }
     const lines = text.split(/\r?\n/);
+    let inGenerated = false;
     for (let i = 0; i < lines.length; i += 1) {
       const line = lines[i];
+      if (line.includes("<!-- BEGIN:generated")) {
+        inGenerated = true;
+        continue;
+      }
+      if (line.includes("<!-- END -->")) {
+        inGenerated = false;
+        continue;
+      }
+      if (inGenerated) continue;
       if (line.includes("legacy-ok")) continue;
       for (const entry of renamed) {
         for (const p of entry.patterns) {

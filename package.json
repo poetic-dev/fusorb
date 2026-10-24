@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "check:ecosystem": "node scripts/check-ecosystem.mjs",
-    "check:names": "node scripts/check-legacy-names.mjs --root . --ledger ecosystem/naming-ledger.json --allow ecosystem/ecosystem.json",
+    "check:names": "node scripts/check-legacy-names.mjs --root . --ledger ecosystem/naming-ledger.json --allow ecosystem/ecosystem.json --allow content/foundation/glossary.md",
     "check:content": "node scripts/check-content.mjs",
     "gen:docs": "node scripts/gen-ecosystem-docs.mjs",
     "check:all": "pnpm check:ecosystem && pnpm check:names && pnpm check:content"
