@@ -7,11 +7,9 @@
 /.yarn/install-state.gz
 /.pnp.*
 
-# Next.js build output
+# Build output
 /.next/
 /out/
-
-# Production & Build outputs
 /build
 /dist
 
@@ -63,3 +61,7 @@ Thumbs.db
 /.eslintcache
 /.stylelintcache
 *.tsbuildinfo
+
+# Local agent scratch (dashboard + planning output; never committed)
+/.agent/
+/.commandcode/

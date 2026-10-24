@@ -1,0 +1,40 @@
+# Owner questions
+
+These are open decisions the foundation cannot make. Each has options, a
+recommendation, and what it blocks.
+
+## 1. Audience for SovGrant, Relnex, and SovPort
+
+- **Options:** public / internal.
+- **Recommendation:** keep internal until each is ready to be described publicly.
+- **Blocks:** what the public layer may mention about those products.
+
+## 2. Whether intel.fusorb.com is public or access-controlled
+
+- **Options:** public / access-controlled.
+- **Recommendation:** access-controlled, since Intel is internal.
+- **Blocks:** the domain-model note for that subdomain.
+
+## 3. Whether the @arcevocirqle social handle is live and stays
+
+- **Options:** live and keep / not live.
+- **Recommendation:** confirm live and keep.
+- **Blocks:** the live-name set in the naming ledger.
+
+## 4. What to do with the older hyphenated GitHub repo (arcevo-cirqle)
+
+- **Options:** archive / redirect / leave.
+- **Recommendation:** archive with a redirect note.
+- **Blocks:** repo hygiene for the public org.
+
+## 5. Whether the two foundation repos transfer from poetic-dev to the fusorb org, and when
+
+- **Options:** transfer now / later / never.
+- **Recommendation:** transfer once fusorb.com is secured.
+- **Blocks:** the repo `org` field in ecosystem.json.
+
+## 6. Which role fusorb.com root plays once secured
+
+- **Options:** this repo's future site / something else.
+- **Recommendation:** this repo's future site.
+- **Blocks:** the root domain's role in the domain model.

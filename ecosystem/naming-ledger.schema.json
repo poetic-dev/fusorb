@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fusorb Naming Ledger",
+  "description": "RENAMED / PENDING / LIVE name entries and the allowlist of paths where legacy tokens are permitted. Documentation of intent; check-legacy-names.mjs enforces the same structure and self-tests in code.",
+  "type": "object",
+  "required": ["schemaVersion", "allow", "entries"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "allow": { "type": "array", "items": { "type": "string" } },
+    "entries": { "type": "array", "items": { "$ref": "#/definitions/entry" } }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "entry": {
+      "type": "object",
+      "required": ["id", "class", "from", "patterns", "to", "examples"],
+      "properties": {
+        "id": { "type": "string" },
+        "class": { "enum": ["renamed", "pending", "live"] },
+        "from": { "type": "array", "items": { "type": "string" } },
+        "patterns": { "type": "array", "items": { "type": "string" } },
+        "to": { "type": ["string", "null"] },
+        "evidence": { "type": "string" },
+        "blockedBy": { "type": "string" },
+        "notes": { "type": "string" },
+        "examples": {
+          "type": "object",
+          "required": ["match", "noMatch"],
+          "properties": {
+            "match": { "type": "array", "items": { "type": "string" } },
+            "noMatch": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fusorb Ecosystem Facts",
+  "description": "Canonical, machine-readable decided facts for the Fusorb ecosystem. This schema is documentation of intent; check-ecosystem.mjs enforces the same structure without a JSON Schema dependency.",
+  "type": "object",
+  "required": ["schemaVersion", "orgs", "npmScopes", "layers", "products", "domains", "sequencing"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "orgs": { "type": "array", "items": { "$ref": "#/definitions/org" } },
+    "npmScopes": { "type": "array", "items": { "$ref": "#/definitions/npmScope" } },
+    "layers": { "type": "array", "items": { "$ref": "#/definitions/layer" } },
+    "products": { "type": "array", "items": { "$ref": "#/definitions/product" } },
+    "domains": { "type": "array", "items": { "$ref": "#/definitions/domain" } },
+    "sequencing": { "type": "array", "items": { "$ref": "#/definitions/sequence" } }
+  },
+  "definitions": {
+    "org": {
+      "type": "object",
+      "required": ["id", "status", "role"],
+      "properties": {
+        "id": { "type": "string" },
+        "status": { "enum": ["active", "retired"] },
+        "role": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "npmScope": {
+      "type": "object",
+      "required": ["scope", "status"],
+      "properties": {
+        "scope": { "type": "string" },
+        "status": { "enum": ["live", "retired"] }
+      },
+      "additionalProperties": false
+    },
+    "layer": {
+      "type": "object",
+      "required": ["id", "repo", "audience", "role"],
+      "properties": {
+        "id": { "type": "string" },
+        "repo": { "$ref": "#/definitions/repo" },
+        "audience": { "type": "string" },
+        "role": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "product": {
+      "type": "object",
+      "required": ["id", "name", "legacyNames", "repo", "role", "audience"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "legacyNames": { "type": "array", "items": { "type": "string" } },
+        "repo": { "$ref": "#/definitions/repo" },
+        "role": { "type": "string" },
+        "audience": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "repo": {
+      "type": "object",
+      "required": ["org", "name"],
+      "properties": {
+        "org": { "type": "string" },
+        "name": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "domain": {
+      "type": "object",
+      "required": ["host", "status"],
+      "properties": {
+        "host": { "type": "string" },
+        "status": { "enum": ["live", "planned"] },
+        "target": { "type": "string" },
+        "serves": { "type": "string" },
+        "uses": { "type": "array", "items": { "type": "string" } },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "sequence": {
+      "type": "object",
+      "required": ["order", "product"],
+      "properties": {
+        "order": { "type": "number" },
+        "product": { "type": "string" },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}
