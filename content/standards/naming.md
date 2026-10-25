@@ -31,15 +31,25 @@ so it matches only the npm scope, never a live name (the live X handle is
 `@fusorb_hq`, not `@arcevocirqle`). The gate self-tests this: it fails hard if
 any renamed or pending pattern matches a live example.
 
-## Pending until released
+## Pending and available
 
-A rename is **pending**, not renamed, until the package that carries it is
-actually released. The rename of `ArcIdClient`, `ArcIdClientConfig`,
-`ArcProvider`, `ArcProviderProps`, and the `arcid_access_token` /
-`arcid_refresh_token` storage keys is pending: the facet source and README use
-the new `SgClient` / `SgProvider` / `sg_*` identifiers, but the published
-packages still export the old identifiers and storage keys. Consumers keep the
-old identifiers until facet releases, then upgrade and rename in one change. See
+A rename starts **pending** when it is decided but not yet released, and becomes
+**renamed** when the package that carries it ships. The `pending` class remains
+supported but currently has zero entries.
+
+A renamed entry may carry two optional fields:
+
+- `availableIn` — an object mapping package names to the minimum version where
+  the new name is available.
+- `adoptWith` — an array of extra package names that must be upgraded in the same
+  change, because older versions pin the pre-rename package exactly and would
+  otherwise install a second copy.
+
+A repo may replace the old token only in the same change that upgrades every
+listed package to at least the listed version.
+
+The Sg rename (`SgClient`, `SgProvider`, and the `sg_*` storage keys) shipped in
+the facet auth and sdk majors, so those entries are now **renamed**. See
 [versioning and releases](versioning-and-releases.md).
 
 ## The allowlist
