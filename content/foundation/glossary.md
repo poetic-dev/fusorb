@@ -42,4 +42,5 @@ patterns and evidence.
 
 Pending renames (decided but not yet released) and the live names are recorded in
 the [naming ledger](../../ecosystem/naming-ledger.json); consumers must not adopt
-pending names until the blocker clears.
+pending names until the blocker clears. The Sg rename has shipped and is now a
+renamed entry, not pending.

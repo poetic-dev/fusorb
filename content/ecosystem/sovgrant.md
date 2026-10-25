@@ -49,8 +49,9 @@ describe it yet.
   snapshot; those are derived facts owned by the repo and are not restated here.
 - The v2 roadmap still names the wallet product by its retired name (see the
   naming ledger).
-- The SDK singleton locally aliases the published client identifier to the new
-  name, confirming the published SDK still ships the pre-rename identifier.
+- The SDK singleton pins the published SDK at a pre-rename version and locally
+  aliases the old client identifier to the new name; it must be upgraded in the
+  same change that adopts the renamed identifiers (see the naming ledger).
 
 ## Evidence
 
