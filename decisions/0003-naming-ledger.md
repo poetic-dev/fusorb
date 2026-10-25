@@ -34,3 +34,11 @@ proves no renamed or pending pattern can match a live name.
 
 `pnpm check:names` self-tests the ledger and fails when a renamed token appears
 outside the allowlist.
+
+## Update 2026-10-25
+
+The Sg rename — the `ArcIdClient` / `ArcProvider` identifiers and the `arcid_*`
+storage keys — shipped in the facet auth and sdk majors, so those two entries
+moved from `pending` to `renamed`. Renamed entries may now carry `availableIn`
+(package → minimum version) and `adoptWith` (packages that must be upgraded in
+the same change). The `pending` class remains supported with zero entries.

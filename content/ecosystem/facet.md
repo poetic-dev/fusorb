@@ -40,12 +40,11 @@ migration completes.
 
 ## Status
 
-The repo is mature and publishes to npm. There is a **decided but unreleased**
-rename of the SovGrant-facing SDK and auth identifiers: the repo source and
-README already use the new identifiers, while the published packages still
-export the old identifiers. Consumers keep the old identifiers until the release
-lands. See [versioning and releases](../standards/versioning-and-releases.md) and
-the [naming standard](../standards/naming.md).
+The repo is mature and publishes to npm. The SovGrant-facing SDK and auth
+identifiers were renamed to `SgClient` / `SgProvider` (with `sg_*` storage keys)
+and shipped in the auth and sdk majors. See [versioning and
+releases](../standards/versioning-and-releases.md) and the [naming
+standard](../standards/naming.md).
 
 ## Evidence
 
