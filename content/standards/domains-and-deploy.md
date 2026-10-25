@@ -18,9 +18,9 @@ names; the table below is generated from `ecosystem.json`.
 | Host | Status | Serves | Uses | Note |
 | --- | --- | --- | --- | --- |
 | arcevocirqle.com.ng | live | — | email, arcevocirqle public site (to be deployed) | — |
-| fusorb.com | planned (before end of 2026) | — | — | — |
+| fusorb.com | planned (before end of 2026) | — | — | hosts this repo's future site once secured |
 | facet.fusorb.com | planned | facet | — | — |
-| intel.fusorb.com | planned | intel | — | audience of this deployment is undecided |
+| intel.fusorb.com | planned | intel | — | access-controlled |
 <!-- END -->
 
 ## The model
@@ -31,7 +31,7 @@ names; the table below is generated from `ecosystem.json`.
   a per-product pattern. Only the named ones are assigned; the rest are
   unassigned until the owner names them.
 
-## Undecided
+## Access control
 
-Whether one planned subdomain is publicly reachable or access-controlled is
-undecided. It stays out of any public statement until the owner decides.
+One planned subdomain (Intel) is access-controlled. It stays out of any public
+statement.

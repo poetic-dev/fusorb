@@ -16,7 +16,7 @@ machine-readable source for these facts is
 
 <!-- BEGIN:generated ecosystem.orgs -->
 - **fusorb** (`active`) — Canonical architecture org: product repos and the @fusorb npm scope
-- **poetic-dev** (`active`) — Current host of the fusorb and arcevocirqle foundation repos; may transfer to fusorb
+- **poetic-dev** (`active`) — Current host of the fusorb and arcevocirqle foundation repos (they stay here)
 - **ArcevoDev** (`retired`) — Legacy org; inaccessible and unused. Never link to it.
 <!-- END -->
 

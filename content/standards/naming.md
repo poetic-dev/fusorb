@@ -27,7 +27,8 @@ arcevocirqle.com.ng, and email addresses on that domain). Many legacy names
 begin with the same prefix. A naive search-and-replace of "arc" would break the
 live domain. Therefore every renamed and pending pattern must be provably unable
 to match a live token. The `@arcevo/` scope pattern includes the trailing slash
-so it never matches `@arcevocirqle`. The gate self-tests this: it fails hard if
+so it matches only the npm scope, never a live name (the live X handle is
+`@fusorb_hq`, not `@arcevocirqle`). The gate self-tests this: it fails hard if
 any renamed or pending pattern matches a live example.
 
 ## Pending until released
