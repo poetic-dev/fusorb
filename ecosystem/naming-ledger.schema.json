@@ -23,6 +23,8 @@
         "evidence": { "type": "string" },
         "blockedBy": { "type": "string" },
         "notes": { "type": "string" },
+        "availableIn": { "type": "object", "additionalProperties": { "type": "string" } },
+        "adoptWith": { "type": "array", "items": { "type": "string" } },
         "examples": {
           "type": "object",
           "required": ["match", "noMatch"],
