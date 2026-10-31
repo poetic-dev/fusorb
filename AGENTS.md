@@ -26,8 +26,7 @@ Facet is the single UI system. This repo adds no UI dependency now.
 
 ## Naming ledger first
 
-Before any rename, read `ecosystem/naming-ledger.json`. Do not touch Relnex until
-the owner says its migration is done.
+Before any rename, read `ecosystem/naming-ledger.json`.
 
 ## Gates
 

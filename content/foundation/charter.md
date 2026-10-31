@@ -30,7 +30,7 @@ practices that keep the solution consistent.
 
 The Fusorb layer decides; the products implement; the public layer presents. A
 product may be described publicly only when its audience is public. Products
-whose audience is undecided stay out of the public layer until the owner decides.
+whose audience is not public stay out of the public layer.
 
 ## Authority
 

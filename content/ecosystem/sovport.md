@@ -31,12 +31,15 @@ self-owned DIDs, all against the SovGrant backend.
 ## Who consumes it and what it consumes
 
 SovPort consumes the framework-agnostic Facet SDK and the Facet store. It is
-consumed by end users once it is built. Its audience is undecided.
+consumed by end users once it is built. Its audience is internal, so the public
+layer must not describe it yet.
 
 ## Status
 
-The repo is a blank Expo starter. The SovGrant integration has not been built;
-the target architecture is documented in its planning docs.
+SovPort is an Expo starter with its SovGrant integration in progress: auth, MFA,
+credential offer/accept, presentation, and wallet-DID flows are scaffolded against
+the Facet SDK, with screens under `src/app/`. The phased plan lives in its
+planning docs.
 
 ## Known gaps
 

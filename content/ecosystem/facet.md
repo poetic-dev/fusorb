@@ -35,8 +35,7 @@ npm packages via Changesets and a GitHub Actions pipeline.
 ## Who consumes it and what it consumes
 
 Facet consumes the SovGrant API through its SDK. It is consumed by SovGrant (for
-its dashboard), by SovPort (SDK only), and is the target for Relnex once its
-migration completes.
+its dashboard), by SovPort (SDK only), and by Relnex (its UI).
 
 ## Status
 
@@ -53,6 +52,7 @@ standard](../standards/naming.md).
 - `facet/pnpm-workspace.yaml`
 - `facet/AGENTS.md`
 - `facet/CLAUDE.md`
-- `facet/.changeset/rename-arcid-to-sg.md` (legacy-ok)
+- `facet/packages/auth/CHANGELOG.md`
+- `facet/packages/sdk/CHANGELOG.md`
 - `facet/.changeset/config.json`
 - `facet/.github/workflows/ci-cd.yml`

@@ -32,9 +32,9 @@ ecosystem.
 | Id | Name | Role | Audience | Repo |
 | --- | --- | --- | --- | --- |
 | facet | Facet | The single UI system for the whole ecosystem | public | fusorb/facet |
-| sovgrant | SovGrant | Canonical identity and access layer | undecided | fusorb/sovgrant |
-| relnex | Relnex | Knowledge, resource and graph system | undecided | fusorb/relnex |
-| sovport | SovPort | Self-sovereign wallet and portable identity | undecided | fusorb/sovport |
+| sovgrant | SovGrant | Canonical identity and access layer | internal | fusorb/sovgrant |
+| relnex | Relnex | Knowledge, resource and graph system | internal | fusorb/relnex |
+| sovport | SovPort | Self-sovereign wallet and portable identity | internal | fusorb/sovport |
 | intel | Intel | Architectural and engineering intelligence layer | internal | fusorb/intel |
 <!-- END -->
 

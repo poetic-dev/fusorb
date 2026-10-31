@@ -32,5 +32,9 @@ product migrates.
 ## Verification
 
 The naming and content gates keep the invariant visible; the waiver itself is a
-decided fact recorded in the standard and, for the Relnex deviation, tracked by
-its migration.
+decided fact recorded in the standard.
+
+## Update 2026-10-31
+
+Relnex migrated from shadcn to the published Facet packages, closing its waiver.
+There is no current UI deviation.

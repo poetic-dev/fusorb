@@ -2,7 +2,7 @@
 title: Relnex
 section: ecosystem
 order: 4
-summary: The knowledge, resource, and graph system — a content engine in mid-migration.
+summary: The knowledge, resource, and graph system — a content engine now on the published Facet packages.
 status: draft
 ---
 
@@ -15,8 +15,8 @@ typed relations. Auth is delegated to SovGrant.
 ## Purpose
 
 Relnex manages knowledge resources (articles, notes, videos) and their
-relationships. It is a Next.js app on Prisma/PostgreSQL with Tailwind v4 and a
-shadcn-based UI.
+relationships. It is a Next.js app on Prisma/PostgreSQL with the published Facet
+packages for its UI.
 
 ## What it owns
 
@@ -27,28 +27,20 @@ shadcn-based UI.
 
 - Identity and auth. Those are delegated to SovGrant; Relnex keeps only a bridge
   to the SovGrant identity.
+- UI primitives. Relnex consumes the published `@fusorb/facet-*` packages and
+  keeps no local UI primitives to maintain.
 
 ## Who consumes it and what it consumes
 
-Relnex consumes SovGrant (for auth) and, for UI, the shadcn stack. It does not
-yet consume the Facet packages — that is the in-flight migration. It is sequenced
-to mature after SovGrant.
+Relnex consumes SovGrant (for auth) and the published Facet packages for its UI.
+It is sequenced to mature after SovGrant.
 
 ## Status
 
-Relnex is **mid-migration**: the owner is moving it to the published Facet
-packages, with uncommitted work in progress. Agents must not touch Relnex until
-the owner says the migration is done. Its audience is undecided.
-
-## Known gaps
-
-- Its README is still titled under a retired name while the package declares
-  `relnex` (see the naming ledger).
-- Its README states a previous Next.js major while the package manifest pins a
-  later one.
-- Its README references a retired org and a retired identity-service name.
-- It builds UI with shadcn rather than Facet — a known deviation of the UI
-  invariant, currently in migration (see the UI invariant standard).
+Relnex is **migrated**: it consumes the published Facet packages, its UI is
+Facet-based, and its repo carries the current name. Development is then paused
+while SovGrant stabilizes; the backend is stabilized and the app builds. Its
+audience is internal, so the public layer must not describe it yet.
 
 ## Evidence
 

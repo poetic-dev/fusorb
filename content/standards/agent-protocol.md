@@ -22,7 +22,6 @@ the agent in use today.
 
 - Consult the naming ledger before any rename.
 - Never apply a rename to a repo without a ledger entry.
-- Never touch Relnex until the owner says its migration is done.
 
 ## Branching and commits
 

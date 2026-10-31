@@ -9,6 +9,8 @@ recommendation, and what it blocks.
 - **Recommendation:** keep internal until each is ready to be described publicly.
 - **Blocks:** what the public layer may mention about those products.
 
+Resolved 2026-10-31: all three stay internal for now.
+
 ## 2. Whether intel.fusorb.com is public or access-controlled
 
 - **Options:** public / access-controlled.
@@ -50,3 +52,5 @@ maybe merging this repo with it then, while at it...
 - **Options:** this repo's future site / something else.
 - **Recommendation:** this repo's future site.
 - **Blocks:** the root domain's role in the domain model.
+
+Resolved 2026-10-31: the root hosts this repo's future site.

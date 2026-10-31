@@ -40,7 +40,7 @@ SovGrant consumes the published Facet packages. It is consumed by Facet's SDK
 ## Status
 
 Backend capabilities are implemented and the frontend is migrated to the
-published Facet packages. Its audience is undecided, so the public layer must not
+published Facet packages. Its audience is internal, so the public layer must not
 describe it yet.
 
 ## Known gaps
@@ -49,9 +49,6 @@ describe it yet.
   snapshot; those are derived facts owned by the repo and are not restated here.
 - The v2 roadmap still names the wallet product by its retired name (see the
   naming ledger).
-- The SDK singleton pins the published SDK at a pre-rename version and locally
-  aliases the old client identifier to the new name; it must be upgraded in the
-  same change that adopts the renamed identifiers (see the naming ledger).
 
 ## Evidence
 

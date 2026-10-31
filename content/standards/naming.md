@@ -69,5 +69,4 @@ passed via `--allow`.
 ## The per-repo execution model
 
 The ledger names the rename; each repo's own agent applies it, later, per repo.
-This repo never edits a product repo. Agents must not touch Relnex until the
-owner says its migration is done.
+This repo never edits a product repo.

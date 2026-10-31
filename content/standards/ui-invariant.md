@@ -29,10 +29,9 @@ A waiver is a deviation, not a resolution. It closes when the product migrates.
 
 ## Current deviation
 
-Relnex builds its UI with shadcn instead of Facet. This is a **known deviation in
-migration**, with the owner as the waiver holder. It is not resolved: the owner is
-moving Relnex to the published Facet packages and has uncommitted work in
-progress.
+There is no current deviation. Relnex migrated from shadcn to the published Facet
+packages, which closed its waiver. The waiver process above remains available for
+any future product that cannot use Facet.
 
 ## Effect on this repo
 
