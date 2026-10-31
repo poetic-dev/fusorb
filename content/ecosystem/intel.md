@@ -42,12 +42,6 @@ internally for cross-repo questions. Its audience is internal.
 Ingestion, provenance, retrieval, provider, and tools are implemented; an API and
 UI are deferred.
 
-## Known gaps
-
-- Its README states that SovGrant imports the retired npm scope, but SovGrant's
-  package manifest shows the current scope — a stale cross-repo claim in Intel's
-  own documentation.
-
 ## Evidence
 
 - `intel/README.md`

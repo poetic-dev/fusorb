@@ -9,6 +9,28 @@
 
 ---
 
+## Update 2026-10-31
+
+This snapshot is superseded. Since it was generated:
+
+- **relnex** migrated to the Facet packages: it declares `@fusorb/facet-*` and no
+  longer imports `@arcevo/facet-*` or uses shadcn; its README is titled
+  `Relnex`. Development is paused while SovGrant stabilizes.
+- **sovgrant** consumes `@fusorb/facet-*` throughout, and its SDK singleton
+  imports `SgClient` directly. The remaining legacy names (the wallet name in its
+  planning docs, the `arcbaseWebhookUrl` key) were renamed on 2026-10-31.
+- **sovport** is no longer a bare scaffold: auth/MFA/credential/presentation and
+  wallet-DID flows are scaffolded against the Facet SDK, and it now carries
+  `AGENTS.md`, `CLAUDE.md`, and CI.
+- **intel**'s README no longer asserts the retired npm scope or shadcn.
+- **facet**'s auth/sdk packages export `SgClient`/`SgProvider`, and the `@arcevo/`
+  npm scope is retired.
+
+See `ecosystem/ecosystem.json` and `ecosystem/naming-ledger.json` for the current
+facts.
+
+---
+
 ## 1. Repo map
 
 | Repo | Folder | package.json name | npm scope | Version | GitHub remote | Role | Maturity |

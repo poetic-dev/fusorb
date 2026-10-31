@@ -41,11 +41,6 @@ credential offer/accept, presentation, and wallet-DID flows are scaffolded again
 the Facet SDK, with screens under `src/app/`. The phased plan lives in its
 planning docs.
 
-## Known gaps
-
-- No agent rules file, no CLAUDE pointer, and no CI workflow (see the repo
-  structure standard for the baseline).
-
 ## Evidence
 
 - `sovport/README.md`

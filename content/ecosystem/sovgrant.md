@@ -47,8 +47,6 @@ describe it yet.
 
 - The README and the agent handbook report different test totals for the same
   snapshot; those are derived facts owned by the repo and are not restated here.
-- The v2 roadmap still names the wallet product by its retired name (see the
-  naming ledger).
 
 ## Evidence
 
