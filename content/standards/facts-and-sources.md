@@ -25,6 +25,7 @@ and linked to from everywhere else. When two places disagree, the owner wins.
 ## Who owns what
 
 - This repo owns decided facts and standards.
+- **Decisions have exactly one owner: an ADR here.** Architectural decisions are recorded as ADRs in `decisions/` (this repo). Product docs keep implementation detail and must link to the relevant ADR.
 - Each product repo owns its code and its derived facts.
 - Facet owns the UI and its registry.
 - Intel owns cross-repo measurement and relationships.

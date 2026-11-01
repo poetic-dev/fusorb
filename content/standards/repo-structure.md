@@ -29,6 +29,10 @@ marked planned.
 
 Fixing these belongs to each repo's own agent, not to this repo.
 
+## Sync
+
+- **Vendored snapshot.** Repos that consume fusorb facts use a vendored snapshot under `vendor/fusorb/` with `PROVENANCE.json` (as arcevocirqle does), replacing hand-written `SYNC.md`. `SYNC.md` is **retired**. (See ADR 0008.)
+
 ## Planned
 
 - A naming gate wired into every repo's CI (today only this repo and the vendored
