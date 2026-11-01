@@ -8,8 +8,10 @@
     "check:ecosystem": "node scripts/check-ecosystem.mjs",
     "check:names": "node scripts/check-legacy-names.mjs --root . --ledger ecosystem/naming-ledger.json --allow ecosystem/ecosystem.json --allow content/foundation/glossary.md",
     "check:content": "node scripts/check-content.mjs",
+    "check:adr": "node scripts/check-adr-contract.mjs",
+    "check:consumer-sync": "node scripts/test-consumer-sync.mjs",
     "gen:docs": "node scripts/gen-ecosystem-docs.mjs",
-    "check:all": "pnpm check:ecosystem && pnpm check:names && pnpm check:content"
+    "check:all": "pnpm check:ecosystem && pnpm check:names && pnpm check:content && pnpm check:adr && pnpm check:consumer-sync"
   },
   "packageManager": "pnpm@12.4.1"
 }
