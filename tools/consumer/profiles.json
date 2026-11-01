@@ -1,0 +1,26 @@
+{
+  "profiles": {
+    "names": {
+      "description": "Ledger + names tool + its two libs (fs-walk, glob)",
+      "files": [
+        { "src": "ecosystem/naming-ledger.json", "dst": "naming-ledger.json" },
+        { "src": "scripts/check-legacy-names.mjs", "dst": "tools/check-legacy-names.mjs" },
+        { "src": "scripts/lib/fs-walk.mjs", "dst": "tools/lib/fs-walk.mjs" },
+        { "src": "scripts/lib/glob.mjs", "dst": "tools/lib/glob.mjs" }
+      ]
+    },
+    "full": {
+      "description": "Arcevocirqle's current set",
+      "files": [
+        { "src": "ecosystem/ecosystem.json", "dst": "ecosystem.json" },
+        { "src": "ecosystem/naming-ledger.json", "dst": "naming-ledger.json" },
+        { "src": "scripts/check-legacy-names.mjs", "dst": "tools/check-legacy-names.mjs" },
+        { "src": "scripts/lib/fs-walk.mjs", "dst": "tools/lib/fs-walk.mjs" },
+        { "src": "scripts/lib/glob.mjs", "dst": "tools/lib/glob.mjs" },
+        { "src": "scripts/lib/frontmatter.mjs", "dst": "tools/lib/frontmatter.mjs" },
+        { "src": "scripts/lib/derived-facts.mjs", "dst": "tools/lib/derived-facts.mjs" },
+        { "src": "scripts/lib/links.mjs", "dst": "tools/lib/links.mjs" }
+      ]
+    }
+  }
+}

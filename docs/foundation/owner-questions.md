@@ -54,3 +54,15 @@ maybe merging this repo with it then, while at it...
 - **Blocks:** the root domain's role in the domain model.
 
 Resolved 2026-10-31: the root hosts this repo's future site.
+
+## 7. Agent-tool files policy
+
+- **Options:** adopt the proposed policy (track `.commandcode/taste/**` only, ignore everything else under `.commandcode/` with the pattern pair `.commandcode/*` + `!.commandcode/taste/` + `!.commandcode/taste/**`) / keep current approach / other.
+- **Recommendation:** adopt this policy (default). Evidence: `relnex/.commandcode/settings.json` contains npm view commands referencing a retired scope; machine-specific settings must not be tracked. Tracking only `taste/**` (deliberate, reviewed, shared preferences) is correct.
+- **Blocks:** whether to update this repo's `.gitignore` to enforce the pattern pair.
+- **Status:** Proposed (default = this policy). This repo's `.gitignore` not changed unless confirmed.
+
+## 8. Identity (ADR 0007)
+- **Relying party scope:** sovgrant and relnex identity-model docs say "all relying parties - first-party Fusorb products (Relnex, Scholium, Facet, ...) and third-party client systems and products we do not own". "Scholium" appears but is not present as a product id in ecosystem.json. Intel's identity-authority governs [repo("relnex"), repo("sovport")]. Confirm which products are in scope as first-party vs third-party; do not assume new products.
+- **Identity bridge details:** Intel seed states "a consumer's User.identityId is the SovGrant Identity.id, and the JWT sub claim is that Identity.id" (sourcePath ecosystem/ecosystem.json). This exact pairing is not present in this repo's files. Confirm this is the canonical ecosystem statement (and its location). ADR 0007 must be self-contained because Intel will extract the ## Decision section verbatim.
+- **Shared-secret sunset:** Both copies say SG_JWT_SECRET is temporary/first-party-only and target is JWKS. Confirm the required retirement stance/timeline for ecosystem-level statement.
