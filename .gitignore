@@ -63,5 +63,10 @@ Thumbs.db
 *.tsbuildinfo
 
 # Local agent scratch (dashboard + planning output; never committed)
-/.agent/
-/.commandcode/
+# Keep .agent/episodes.md and .commandcode/settings.json tracked (owner Q7).
+/.agent/*
+!/.agent/episodes.md
+/.commandcode/*
+!/.commandcode/settings.json
+!/.commandcode/taste/
+!/.commandcode/taste/**

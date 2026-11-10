@@ -9,10 +9,13 @@ and evidence. Anything not listed here matches the spec.
 is dependency-free `.mjs` run directly by `node`, and `apps/*` does not exist
 until the first app. Nothing to declare.
 
-## 2. `.gitignore` also ignores `/.commandcode/`
+## 2. Tracked agent-tool files under `.agent/` and `.commandcode/`
 
-§5 requires `.agent/` to be ignored (it is). `.commandcode/` is the local agent
-tool state for this machine and is ignored for the same reason.
+§5 requires `.agent/` to be ignored for local scratch. Per the resolved agent-tool
+policy (owner question 7, 2026-11-10), this repo tracks `.agent/episodes.md`
+(architectural inferences/episode notes) and `.commandcode/settings.json`, while
+keeping all other local agent scratch ignored via ignore/negation patterns in
+`.gitignore`. Deliberate preferences remain trackable under `.commandcode/taste/**`.
 
 ## 3. `packageManager` stays at pnpm 12.4.1
 
