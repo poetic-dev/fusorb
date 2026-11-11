@@ -32,6 +32,8 @@ Fixing these belongs to each repo's own agent, not to this repo.
 ## Sync
 
 - **Vendored snapshot.** Repos that consume fusorb facts use a vendored snapshot under `vendor/fusorb/` with `PROVENANCE.json` (as arcevocirqle does), replacing hand-written `SYNC.md`. `SYNC.md` is **retired**. (See ADR 0008.)
+- **Profiles.** What is vendored is selected by profile: `names` (the ledger and the naming gate), `full` (ecosystem data plus the shared libs), and `decisions` (the ADRs). Profiles compose, so `--profile full,decisions` vendors both. A directory entry vendors a whole tree, so a new file — including a new ADR — is picked up without editing the profile.
+- **Freshness.** The offline check verifies the vendored bytes alone and is CI-safe. Given the sibling repo, the freshness check additionally fails when the recorded source commit is behind the source, when a profiled source file is not vendored, or when a vendored file has no source. Consumers run it locally or in a scheduled job; usage is documented in `tools/consumer/README.md`.
 
 ## Planned
 

@@ -6,3 +6,4 @@
 - Generally accepts the agent's recommendations and is comfortable with the agent proceeding on the recommended option. Confidence: 0.7
 - Expects claims recorded about sibling/product repos to be verified against the actual local repo sources (package manifests, READMEs, changelogs) rather than trusted from recorded docs. Confidence: 0.65
 - Expects work to end fully committed and published — a clean working tree is not enough; every repo (including vendored/synced ones) should match origin/main with no dangling uncommitted or unpushed changes. Confidence: 0.6
+- Prefers to run git commands (commits/pushes) himself manually rather than having the agent execute them. Confidence: 0.55

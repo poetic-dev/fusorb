@@ -65,3 +65,25 @@ A nightly job compares each repo's `PROVENANCE.json` `sourceCommit` with this re
 ## Verification
 - Self-test `scripts/test-consumer-sync.mjs` passes (clean sync both profiles, byte flip fails, unlisted file fails, Windows paths/CRLF).
 - Gate `pnpm check:consumer-sync` runs self-test via `check:all`.
+
+## Update 2026-11-10
+
+Offline `--check` only proves self-consistency (`vendor/` vs `PROVENANCE.json`), so
+it cannot see a live fusorb change such as a new decision. The consumer tooling is
+hardened for freshness.
+
+- **Directory profiles.** A profile entry may be a directory mapping
+  (`{ srcDir, dstDir }`) that expands to every file under it, so a new file — for
+  example a new ADR — is vendored without editing the profile. A `decisions`
+  profile is added for consumers that vendor the decision record, and profiles
+  compose (`--profile full,decisions`).
+- **Freshness mode.** `--check --from <fusorb>` now also fails when
+  `PROVENANCE.sourceCommit` differs from the source repo's HEAD (commit drift),
+  when a profiled source file is not vendored (a new file), or when a vendored
+  file has no source in the selected profile. The offline `--check` (no `--from`)
+  is unchanged and stays CI-safe; freshness needs the sibling repo and is
+  therefore a local or scheduled check.
+- **Tests.** `scripts/test-consumer-sync.mjs` covers commit drift, an unvendored
+  source file, the `decisions` profile, and profile composition.
+- **Consumers** run the local freshness check as a `check:freshness` script;
+  `tools/consumer/README.md` documents the modes and wiring.

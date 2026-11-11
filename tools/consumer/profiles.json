@@ -10,7 +10,7 @@
       ]
     },
     "full": {
-      "description": "Arcevocirqle's current set",
+      "description": "Arcevocirqle's current set: ecosystem data + names tool + the shared libs",
       "files": [
         { "src": "ecosystem/ecosystem.json", "dst": "ecosystem.json" },
         { "src": "ecosystem/naming-ledger.json", "dst": "naming-ledger.json" },
@@ -21,6 +21,10 @@
         { "src": "scripts/lib/derived-facts.mjs", "dst": "tools/lib/derived-facts.mjs" },
         { "src": "scripts/lib/links.mjs", "dst": "tools/lib/links.mjs" }
       ]
+    },
+    "decisions": {
+      "description": "Fusorb ADRs (all of decisions/**), for consumers that vendor the decision record",
+      "files": [{ "srcDir": "decisions", "dstDir": "decisions" }]
     }
   }
 }
