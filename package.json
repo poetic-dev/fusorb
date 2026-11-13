@@ -13,5 +13,5 @@
     "gen:docs": "node scripts/gen-ecosystem-docs.mjs",
     "check:all": "pnpm check:ecosystem && pnpm check:names && pnpm check:content && pnpm check:adr && pnpm check:consumer-sync"
   },
-  "packageManager": "pnpm@12.4.1"
+  "packageManager": "pnpm@12.18.0"
 }
